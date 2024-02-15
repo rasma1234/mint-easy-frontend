@@ -1,0 +1,61 @@
+@import "./variables.scss";
+@import "./responsive.scss";
+
+body,
+html {
+  margin: 0;
+  padding:0;
+  background-color: $main-bg; // Set the background color to match your design
+  height: 100%; 
+
+}
+
+* {
+  margin: 0;
+  padding:0 0 5px 0;
+
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  font-family: "Inter", sans-serif;
+  background-color: $main-bg;
+  color: $main-color;
+  min-height: 100vh; // Set minimum height to 100% of the viewport height
+  display: flex; 
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.menuContainer {
+  width: 250px;
+  padding: 5px 20px;
+  border-right: 2px solid $soft-bg;
+
+  @include lg {
+    width: max-content;
+  }
+}
+
+.contentContainer {
+  padding: 5px 20px;
+  width: 100%;
+}
+
+
+.footer {
+  margin-top: auto; // Push the footer to the bottom
+  padding: 10px;
+  background-color: $main-bg;
+  color: inherit;
+}

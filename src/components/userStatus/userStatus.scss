@@ -1,0 +1,82 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
+
+.userStatus {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  height: 100%;
+  text-align: center;
+
+  .name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  .number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+
+  .topRow {
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px none $dark-color;
+    border-radius: 10px;
+  }
+
+  .bottomRow {  
+    //grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .boxInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Center vertically
+    align-items: center; // Center horizontally
+    text-align: center; // Center text
+
+    // Add padding for spacing between text and number
+    padding: 10px;
+
+    border: 1px hidden $dark-color;
+    border-radius: 10px;
+  }
+
+  .boxName {
+  } 
+
+  .boxAvailable {
+    border: 1px dashed $dark-color;
+    border-radius: 10px;
+  }
+
+  .boxInvested {
+    border: 1px dashed $dark-color;
+    border-radius: 10px;
+  }
+
+  .boxProfitLoss {
+    border: 1px dashed $dark-color;
+    border-radius: 10px;
+
+    &.green {
+      .number {
+        color: green;
+      }
+    }
+
+    &.red {
+      .number {
+        color: red;
+      }
+    }
+  }
+}

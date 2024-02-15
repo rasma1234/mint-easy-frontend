@@ -1,0 +1,48 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.stockGenerator {
+  display: flex;
+  flex-direction: column;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $main-bg;
+      background-color: $soft-color;
+      color: $dark-color;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      width: 38%;
+    }
+
+    button {
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid $main-bg;
+      background-color: $soft-color;
+      color: $dark-color;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $warmer-color;
+        color: $main-bg;
+      }
+    }
+  }
+}

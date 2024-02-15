@@ -1,0 +1,129 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.home {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: (minmax(180px, auto));
+  grid-auto-flow: dense;
+
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .box {
+    padding: 20px;
+    // border: 1px solid $soft-bg;
+    border-radius: 10px;
+  }
+
+  .box1 {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+
+  .box2 {
+    grid-column: span 4;
+    grid-row: span 2;
+
+    background-color: $soft-color;
+
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+   
+    
+
+    .pageTitle {
+      color: $dark-color;
+      font-size: clamp(24px, 2vw, 200px);
+    }
+
+    .pageSubtitle {
+      color: $cooler-color;
+      font-size: clamp(12px, 4vw, 18px);
+      margin-bottom: 20px;
+    }
+
+    .pageText {
+      color: $dark-color;
+      font-size: clamp(12px, 5vw, 18px);
+      line-height: 1.5;
+    }
+
+    .btnPanel {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding-bottom: 10px;
+      padding-top: 30;
+      padding-left: 10;
+      padding-right: 10;
+
+      @include md {
+        flex-direction: column;
+      }
+      @include sm {
+        flex-direction: column;
+      }
+      @include lg {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-transform: uppercase;
+        margin-top: 20px;
+        background: linear-gradient(to right, $soft-bg, $cooler-color);
+        color: $soft-color;
+        padding: 30px 80px;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: 800;
+        cursor: pointer;
+        //transition: all 0.2s ease-in-out;
+        letter-spacing: 1.5px;
+
+
+        @include md {
+          margin-top: 40px;
+        }
+        @include sm {
+          margin-top: 40px;
+        }
+        @include lg {
+          margin-top: 40px;
+        }
+
+        &:hover {
+          background: $soft-color;
+          color: $text-btn-hover;
+          box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+          //border: 1px solid $soft-bg;
+        }
+      }
+    }
+  }
+
+  .box4 {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+
+  .box7 {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    @include md {
+      display: none;
+    }
+  }
+}

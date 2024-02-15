@@ -1,0 +1,19 @@
+version: "3"
+services:
+  react-app:
+    build:
+      context: .
+    volumes:
+      - react-app-build:/app/dist:rw
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - react-app-build:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt/live:/etc/letsencrypt/live
+volumes:
+  react-app-build:

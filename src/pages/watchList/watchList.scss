@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.watchList {
+
+    .dataTable {
+
+    
+        .dataGrid {
+          background-color: $soft-color; // Set your desired background color
+          color: $dark-color; // Set your desired font color
+        }
+      }
+}
